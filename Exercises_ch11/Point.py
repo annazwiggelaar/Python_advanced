@@ -6,6 +6,9 @@ class Point:
         self.x = x
         self.y = y
 
+    def __str__(self):
+        return "({0}, {1})".format(self.x, self.y)
+
     def distance(self, target):
         """Return the distance between myself and the target"""
         mx = (target.x - self.x) ** 2

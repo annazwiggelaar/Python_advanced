@@ -10,7 +10,6 @@ print(r)
 z = Point(3, 4).reflect_x()
 print(z)
 
-i = Point(4, -10).slope_from_origin()
-print(i)
+print(Point(4, 10).slope_from_origin())
 
 print(Point(4, 11).get_line_to(Point(6, 15)))
