@@ -32,4 +32,4 @@ class SMS_store:
         self.sms_history.pop(index)
 
     def clear(self):
-        self.sms_history = list()
+        self.sms_history = list()l=-
