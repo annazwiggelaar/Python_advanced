@@ -35,3 +35,24 @@ class Point:
         else:
             b = target.y + o
         return "y =", slope, "x +", b
+
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+    def __mul__(self, other):
+        return self.x * other.x + self.y * other.y
+
+    def __rmul__(self, other):
+        return Point(other * self.x, other * self.y)
+
+    def multadd(self, y, z):
+        return self * y + z
+
+    def reverse(self):
+        (self.x, self. y) = (self.y, self.x)
+
+    def front_and_back(self):
+        import copy
+        back = copy.copy(self)
+        back.reverse()
+        print(str(self) + str(back))
