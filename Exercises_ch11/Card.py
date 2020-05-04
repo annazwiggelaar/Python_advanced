@@ -8,6 +8,7 @@ class Card:
 
     def __str__(self):
         return self.ranks[self.rank] + " of " + self.suits[self.suit]
+        # or: return "{} of {}".format(self.ranks[self.rank], self.suits[self.suit])
 
     def __cmp__(self, other):
         # check suits
