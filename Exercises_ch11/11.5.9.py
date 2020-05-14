@@ -17,4 +17,3 @@ game.deck.deal([hand_2], 13)
 print(hand_2)
 hand_2.remove_matches()
 print(hand_2)
-
