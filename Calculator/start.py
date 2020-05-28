@@ -37,13 +37,13 @@ class Window(Frame):
         button_9.place(x=260, y=300)
         button_ac = Button(self, text="AC")
         button_ac.place(x=200, y=250)
-        button_divide = Button(self, text="%")
+        button_divide = Button(self, text="%", command=self.divide)
         button_divide.place(x=290, y=250)
-        button_multiply = Button(self, text="x")
+        button_multiply = Button(self, text="x", command=self.multiply)
         button_multiply.place(x=290, y=300)
-        button_minus = Button(self, text="-")
+        button_minus = Button(self, text="-", command=self.minus)
         button_minus.place(x=290, y=350)
-        button_add = Button(self, text="+")
+        button_add = Button(self, text="+", command=self.add)
         button_add.place(x=290, y=400)
         button_is = Button(self, text="=")
         button_is.place(x=290, y=450)
@@ -51,8 +51,21 @@ class Window(Frame):
         w.pack()
         w.create_text(100, 20, fill="darkblue", text="test")        # text output
 
+
     def exit_window(self):
         exit()
+
+    def divide(self):
+        return lambda a, b: a / b
+
+    def multiply(self):
+        return lambda a, b: a * b
+
+    def minus(self):
+        return lambda a, b: a - b
+
+    def add(self):
+        return lambda a, b: a + b
 
 
 root = Tk()
